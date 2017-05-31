@@ -1,0 +1,39 @@
+#+title:  Student Info for ITWS2 Final Exam, Spring 2017 IIIT Hyderabad
+#+AUTHOR: ITWS2 Instructors
+#+DATE: [2017-04-27 Thu]
+#+SETUPFILE: ./org-templates/level-0.org
+#+TAGS: boilerplate(b)
+#+EXCLUDE_TAGS: boilerplate
+#+OPTIONS: ^:nil
+
+
+* Student Info
+
+ - NAME: 
+
+ - ROLL No:
+
+ - SEAT No:
+
+ - PROBLEM SET No:
+
+ - IP No: 
+
+
+* How to find your machine's IP
+
+You should know this by now ...
+
+But if not, make sure you are seeing this file in Org Mode.
+
+Put your cursor on the =#+BEGIN_SRC= line below and type C-c
+C-c (Ctrl-c twice in quick succession).  If this doesn't
+work, go to the shell and type =ifconfig= and get the
+output.  (The IP address is the value against =inet addr=.)
+
+
+#+BEGIN_SRC bash :results output :eval yes
+ifconfig
+#+END_SRC
+
+

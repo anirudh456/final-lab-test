@@ -1,0 +1,81 @@
+#+title:  ITWS2 Final Exam, Spring 2017 IIIT Hyderabad
+#+AUTHOR: ITWS2 Instructors
+#+DATE: [2017-04-27 Thu]
+#+SETUPFILE: ./org-templates/level-0.org
+#+TAGS: boilerplate(b)
+#+EXCLUDE_TAGS: boilerplate
+#+OPTIONS: ^:nil
+
+* First things first
+
+ 1. Questions are allowed only about the initial build.  
+
+ 2. No questions will be entertained after the 10am.  Please
+    proceed after making reasonable assumptions after that.
+
+ 3. Literate code is under [[./runtime]].  Built code is under
+    [[../build/code]] and documentation under [[../build/docs]].
+
+    You are expected to conform strictly to the above
+    structure.  If you need to create any new directories,
+    please make sure they are in the tree under [[./runtime]].
+    If you fail to do so (e.g., create a new directory under
+    =src=), you may incur major penalties.
+
+
+ 4. Please sit ONLY at the seat assigned to you by your
+    TA's.  
+
+
+ 5. Fill in the org file [[./student-info.org]].  Do this now
+    Please clearly mention your seat number.
+
+* What to do next
+
+ 1. Locate your exam problem sheet based on whether you are
+    in the group A or B
+
+
+    Your group determines the problem set you will need to
+    attempt.
+
+|---------+-------+-------------|
+| Seat No | Group | Problem Set |
+|         |       |             |
+|---------+-------+-------------|
+| Even    | A     |             |
+|---------+-------+-------------|
+| Odd     | B     |             |
+|---------+-------+-------------|
+
+
+ 1. Read the high level description of the application at
+    [[./app.org]].
+
+ 2. Study the literate code implementing the application
+    that is a much smaller version of the user directory
+    application.  The starting point of the system's
+    documentation is the [[./runtime/index.org][runtime]].  Don't spend too much time
+    just reading, you can always come back to reading the
+    code.  
+
+ 3. Reach for your problem sets:
+
+     - Problem set A  [[./prob-A.org]]
+
+
+     - Problem set B  [[./prob-B.org]]
+
+
+ 4. Incremental builds :: Please read
+      [[./p-description.org][Description of how to do incremental builds]]  to speed
+      up your build process!
+
+
+
+* Good Luck!
+
+
+
+
+

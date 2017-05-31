@@ -1,0 +1,73 @@
+#+title:  Problem Set =B=
+#+DATE: [2017-04-27 Thu]
+#+SETUPFILE: ./org-templates/level-0.org
+#+TAGS: boilerplate(b)
+#+EXCLUDE_TAGS: boilerplate
+#+OPTIONS: ^:nil
+
+* Group B Problem set
+
+You are given the implementation of the =show_users= route.
+Please study the implementation and the test cases to
+understand how the route is implemented across the two
+components: guard and engine.
+
+Now, your job is to complete the implementation of the guard
+and engine components for =del-user= user route.  
+
+Follow these steps:
+
+** Guard
+
+     1. Go to the [[./runtime/components/guard/del_user/index.org][del_user]] directory that contains a command
+        handler =DelUser.do=.  
+
+     2. Go to the =Checks= section of the  [[./runtime/components/guard/del_user/index.org][del_user]] page of =Guard=.
+        Under each of its subsections, you will find
+        incomplete definitions of methods, namely:
+
+		- =check_type=
+		- =check_auth=
+		- =check_state=
+
+	 3. Complete the definitions of the above methods.
+
+
+	 4. Build and test.  There are some test cases in the
+        [[./runtime/components/guard/del_user/tests][del_user tests]].  Please study them and make sure
+        that they continue to PASS!
+
+	 5. Write the test case =test_check_auth=.  Complete the
+        [[./runtime/components/guard/del_user/tests/del-user-without-admin-role.org][TestCheckAuth]] test case by providing a definition of
+        the =test_check_auth= method.  This test is supposed
+        to raise an exception because the session's role is
+        not admin.
+
+
+** Engine
+
+     1. Go to the [[./runtime/components/engine/del_user/index.org][del_user]] directory of the engine that
+        contains a skeleton of the command handler =DelUser.do=.
+
+
+	 2. Complete the =do= method by invoking the appropriate
+        method on the entity manager.
+
+     
+     3. Make sure test cases continue to PASS!
+
+ 
+   
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+#+TITLE: Description for doing Incremental builds
+#+AUTHOR: M.S.Soumya
+#+DATE: [2017-04-25 Tue]
+
+
+* Incremental builds
+  While developing systems, newer components are built incrementally.
+  These components need to be tested. While writing one might need to
+  test his/her code to comply with the other parts. This can be done
+  with incremental builds. The following section describes how this
+  can be done in the literate environment.
+
+* A key binding for incremental builds
+  
+  The problem with the existing build environment is that each time a
+  change is made to the code, one needs to run a =make -k all=. This
+  command tangles the entire code to into the =build/code= directory. To
+  fix this and to allow incremental builds a small process needs to be
+  followed which is described below.
+
+** Process for incremental builds
+   We have defined a key-binding in Emacs which allows developers to
+   build the code form their org files and test them in the given
+   directory. *This configuration has been pre-installed on your*
+   *machines.* This allows for incremental development. But, for this
+   key-binding to work you need to follow these steps:
+
+   - Step 1 :: Make changes in the code-block in the org file.
+
+   - Step 2 :: Save the changes.
+
+   - Step 3 :: Tangle the code-blocks in the org file using the
+               command =C-c C-v t=
+
+   - Step 4 :: Open the directory in which you have written your code
+               in Emacs =dired mode=. (command =C-x C-f=)
+
+   - Step 5 :: Mark the tangled code files by placing the cursor on
+               them and pressing =m=
+
+   - Step 6 :: Once the files are marked, you need to press the
+               key-binding, which is =P= ie. =Shift + p=
+
+
+   
+   
+
+
+
+
+* Incremental Running of code
+
+   1. You may incrementally tangle  files out to
+      =build/code= by the method described above.
+
+   2. Keep a shell window or buffer open in the directory
+      =build/code=.
+
+   3. Run the command 
+
+#+BEGIN_EXAMPLE
+python -m unittest discover
+#+END_EXAMPLE
+
+       This will run all the test cases in one shot.
+
+

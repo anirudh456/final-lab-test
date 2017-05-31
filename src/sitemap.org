@@ -1,0 +1,139 @@
+#+TITLE: Sitemap for project org-docs
+
+   + org-templates
+     + [[file:org-templates/level-0.org][level-0]]
+     + [[file:org-templates/level-1.org][level-1]]
+     + [[file:org-templates/level-2.org][level-2]]
+     + [[file:org-templates/level-3.org][level-3]]
+     + [[file:org-templates/level-4.org][level-4]]
+     + [[file:org-templates/level-5.org][level-5]]
+     + [[file:org-templates/tex-macros.org][tex-macros]]
+   + runtime
+     + components
+       + engine
+         + add_user
+           + tests
+             + [[file:runtime/components/engine/add_user/tests/index.org][Test Setup for Add-Users Command Handler]]
+             + [[file:runtime/components/engine/add_user/tests/test_pass.org][Test that invokes the =do= method without any failure]]
+           + [[file:runtime/components/engine/add_user/index.org][=add_user= route of the =Engine= component]]
+         + del_user
+           + tests
+             + [[file:runtime/components/engine/del_user/tests/index.org][Test Setup for Del User Command Handler]]
+             + [[file:runtime/components/engine/del_user/tests/do-success.org][Test that invoked the =do= method without any failure]]
+             + [[file:runtime/components/engine/del_user/tests/del-non-existent-user.org][Test that invoked the =do= method without any failure]]
+           + [[file:runtime/components/engine/del_user/index.org][=del_user= route of the =Engine= component]]
+         + show_users
+           + tests
+             + [[file:runtime/components/engine/show_users/tests/index.org][Test Setup for Show-Users Command Handler]]
+             + [[file:runtime/components/engine/show_users/tests/test_pass.org][Test that invokes the =do= method without any failure]]
+           + [[file:runtime/components/engine/show_users/index.org][=show_users= route of the =Engine= component]]
+         + [[file:runtime/components/engine/index.org][Engine component]]
+       + guard
+         + add_user
+           + tests
+             + [[file:runtime/components/guard/add_user/tests/index.org][Test Setup for Add-User Command Handler]]
+             + [[file:runtime/components/guard/add_user/tests/no-session.org][Test on add_user route when session is not present in the entity manager]]
+             + [[file:runtime/components/guard/add_user/tests/wrong-arg-types.org][Test on add_users route with wrong type of arguments]]
+             + [[file:runtime/components/guard/add_user/tests/check-admin-auth.org][Test that check only admin can add user]]
+             + [[file:runtime/components/guard/add_user/tests/do-success.org][Test that invoked the =do= method without any failure]]
+           + [[file:runtime/components/guard/add_user/index.org][=add_user= route of the =Guard= component]]
+         + del_user
+           + tests
+             + [[file:runtime/components/guard/del_user/tests/index.org][Test Setup for Del User Command Handler]]
+             + [[file:runtime/components/guard/del_user/tests/no-session.org][Test on del_user route when session is not present in the entity manager]]
+             + [[file:runtime/components/guard/del_user/tests/del-user-without-admin-role.org][Test on del_user route when the role in the session is not admin]]
+             + [[file:runtime/components/guard/del_user/tests/cannot-delete-onself.org][Test on del_user route when the role in the session is not admin]]
+             + [[file:runtime/components/guard/del_user/tests/wrong-arg-types.org][Test on del_user route with wrong type of arguments]]
+             + [[file:runtime/components/guard/del_user/tests/do-success.org][Test that invoked the =do= method without any failure]]
+           + [[file:runtime/components/guard/del_user/index.org][=del_user= route of the =Guard= component]]
+         + show_users
+           + tests
+             + [[file:runtime/components/guard/show_users/tests/index.org][Test Setup for Show-Users Command Handler]]
+             + [[file:runtime/components/guard/show_users/tests/no-session.org][Test on show_users route when session is not present in the entity manager]]
+             + [[file:runtime/components/guard/show_users/tests/wrong-arg-types.org][Test on show_users route with wrong type of arguments]]
+             + [[file:runtime/components/guard/show_users/tests/do-success.org][Test that invoked the =do= method without any failure]]
+           + [[file:runtime/components/guard/show_users/index.org][=show_users= route of the =Guard= component]]
+         + [[file:runtime/components/guard/index.org][Guard component]]
+       + [[file:runtime/components/index.org][Components]]
+     + datatypes
+       + cmd
+         + [[file:runtime/datatypes/cmd/index.org][Command Data Type]]
+       + instr
+         + add_user
+           + [[file:runtime/datatypes/instr/add_user/index.org][The =add-user= instruction type]]
+         + del_user
+           + [[file:runtime/datatypes/instr/del_user/index.org][The =del_user= instruction type]]
+         + show_users
+           + [[file:runtime/datatypes/instr/show_users/index.org][The =show_users= instruction type]]
+         + [[file:runtime/datatypes/instr/index.org][The =Instr= datatype]]
+       + [[file:runtime/datatypes/index.org][Datatypes of the wires: instructions and results]]
+     + emgrs
+       + svem
+         + tests
+           + session
+             + [[file:runtime/emgrs/svem/tests/session/index.org][Session entitiy tests for the Safe Volatile Entity Manager]]
+           + user
+             + [[file:runtime/emgrs/svem/tests/user/index.org][User entitiy tests for the Safe Volatile Entity Manager]]
+           + [[file:runtime/emgrs/svem/tests/index.org][Testing  App Safe Volatile Entity Manager]]
+         + [[file:runtime/emgrs/svem/index.org][The Application's Entity Manager]]
+       + [[file:runtime/emgrs/index.org][Application specific constraints and Entity Managers]]
+     + exceptions
+       + app
+         + [[file:runtime/exceptions/app/index.org][=AppException=]]
+         + [[file:runtime/exceptions/app/test.org][Unit tests for =AppException=]]
+       + arity
+         + [[file:runtime/exceptions/arity/index.org][=ArityException=]]
+       + keymismatch
+         + [[file:runtime/exceptions/keymismatch/index.org][=KeyMismatchException=]]
+       + [[file:runtime/exceptions/custom_exceptions.org][Custom Exceptions]]
+       + [[file:runtime/exceptions/index.org][The =exceptions= Package]]
+     + objects
+       + email
+         + [[file:runtime/objects/email/index.org][Email Object]]
+       + name
+         + [[file:runtime/objects/name/index.org][Name Object]]
+       + role
+         + [[file:runtime/objects/role/index.org][Role Object]]
+       + session
+         + tests
+           + [[file:runtime/objects/session/tests/create_session_ok.org][Create session successfully]]
+           + [[file:runtime/objects/session/tests/no_role_exc.org][Test session creation with no role.  Raises exception]]
+           + [[file:runtime/objects/session/tests/index.org][Tests for =Session= object tests]]
+           + [[file:runtime/objects/session/tests/create_session_exc.org][Tests for Create session that raise an Exception]]
+         + [[file:runtime/objects/session/index.org][Session Object]]
+       + user
+         + [[file:runtime/objects/user/index.org][User Object]]
+       + [[file:runtime/objects/index.org][Objects]]
+     + utils
+       + class_templates
+         + tests
+           + [[file:runtime/utils/class_templates/tests/index.org][Tests for Class Templates]]
+         + [[file:runtime/utils/class_templates/index.org][Class Templates]]
+       + components
+         + [[file:runtime/utils/components/index.org][Generic Component]]
+       + entitymgrs
+         + volatile
+           + safe
+             + [[file:runtime/utils/entitymgrs/volatile/safe/index.org][Utility Safe Volatile Entity Manager]]
+           + unsafe
+             + [[file:runtime/utils/entitymgrs/volatile/unsafe/index.org][Unsafe Volatile Entity Manager]]
+           + [[file:runtime/utils/entitymgrs/volatile/index.org][Entity Managers]]
+         + [[file:runtime/utils/entitymgrs/index.org][Entity Managers]]
+       + factories
+         + [[file:runtime/utils/factories/index.org][Factories]]
+         + [[file:runtime/utils/factories/property-class-factory.org][Property Class Factory]]
+       + type_utils
+         + [[file:runtime/utils/type_utils/index.org][Type Predicates and Checks]]
+       + [[file:runtime/utils/index.org][The =utils= Package]]
+     + workflows
+       + guard_engine
+         + [[file:runtime/workflows/guard_engine/index.org][Guard Engine workflow]]
+         + [[file:runtime/workflows/guard_engine/test.org][Tests for Guard-Sys workflow]]
+       + [[file:runtime/workflows/index.org][Workflows]]
+     + [[file:runtime/index.org][Runtime of Application]]
+   + [[file:app.org][Application]]
+   + [[file:p-description.org][Description for doing Incremental builds]]
+   + [[file:index.org][ITWS2 Final Exam, Spring 2017 IIIT Hyderabad]]
+   + [[file:prob-A.org][Problem Set =A=]]
+   + [[file:prob-B.org][Problem Set =B=]]
+   + [[file:student-info.org][Student Info for ITWS2 Final Exam, Spring 2017 IIIT Hyderabad]]
